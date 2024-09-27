@@ -39,9 +39,30 @@ Product.create(name: "Product 7", description: "Rice milk", quantity: 4, price: 
 Product.create(name: "Product 8", description: "Pea milk", quantity: 2, price: 23.00, available: true, released_at: Time.now - 4.days, expiry_date: Time.now + 10.days, discount: 5)
 Product.create(name: "Product 9", description: "Chocolate milk", quantity: 6, price: 21.00, available: true, released_at: Time.now - 8.days, expiry_date: Time.now + 60.days, discount: 30)
 Product.create(name: "Product 10", description: "Strawberry milk", quantity: 1, price: 24.00, available: false, released_at: Time.now - 9.days, expiry_date: Time.now + 45.days, discount: 0)
-
 ```
 *   Create atleast 10 records using the save method
+```
+product1 = Product.new(name: "Product 1", description: "Whole milk", quantity: 3, price: 20.50, available: true, released_at: Time.now - 5.days, expiry_date: Time.now + 25.days, discount: 10)
+product1.save
+product2 = Product.new(name: "Product 2", description: "Almond milk", quantity: 5, price: 25.00, available: true, released_at: Time.now - 10.days, expiry_date: Time.now + 30.days, discount: 15)
+product2.save
+product3 = Product.new(name: "Product 3", description: "Soy milk", quantity: 10, price: 22.00, available: true, released_at: Time.now - 7.days, expiry_date: Time.now + 20.days, discount: 5)
+product3.save
+product4 = Product.new(name: "Product 4", description: "Oat milk", quantity: 0, price: 30.00, available: false, released_at: Time.now - 2.days, expiry_date: Time.now + 15.days, discount: 0)
+product4.save
+product5 = Product.new(name: "Product 5", description: "Coconut milk", quantity: 8, price: 18.50, available: true, released_at: Time.now - 3.days, expiry_date: Time.now + 40.days, discount: 20)
+product5.save
+product6 = Product.new(name: "Product 6", description: "Cashew milk", quantity: 12, price: 27.50, available: true, released_at: Time.now - 1.days, expiry_date: Time.now + 35.days, discount: 10)
+product6.save
+product7 = Product.new(name: "Product 7", description: "Rice milk", quantity: 4, price: 19.99, available: true, released_at: Time.now - 6.days, expiry_date: Time.now + 50.days, discount: 25)
+product7.save
+product8 = Product.new(name: "Product 8", description: "Pea milk", quantity: 2, price: 23.00, available: true, released_at: Time.now - 4.days, expiry_date: Time.now + 10.days, discount: 5)
+product8.save
+product9 = Product.new(name: "Product 9", description: "Chocolate milk", quantity: 6, price: 21.00, available: true, released_at: Time.now - 8.days, expiry_date: Time.now + 60.days, discount: 30)
+product9.save
+product10 = Product.new(name: "Product 10", description: "Strawberry milk", quantity: 1, price: 24.00, available: false, released_at: Time.now - 9.days, expiry_date: Time.now + 45.days, discount: 0)
+product10.save
+```
 *   Fetch all products where name is "Laptop".
 *   Find products where price is greater than 100.
 *   Retrieve products where available is true.
