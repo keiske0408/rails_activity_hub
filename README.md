@@ -29,6 +29,16 @@ end
 ```
 *   Create atleast 10 records using the create method
 ```
+Product.create(name: "Product 1", description: "Whole milk", quantity: 3, price: 20.50, available: true, released_at: Time.now - 5.days, expiry_date: Time.now + 25.days, discount: 10)
+Product.create(name: "Product 2", description: "Almond milk", quantity: 5, price: 25.00, available: true, released_at: Time.now - 10.days, expiry_date: Time.now + 30.days, discount: 15)
+Product.create(name: "Product 3", description: "Soy milk", quantity: 10, price: 22.00, available: true, released_at: Time.now - 7.days, expiry_date: Time.now + 20.days, discount: 5)
+Product.create(name: "Product 4", description: "Oat milk", quantity: 0, price: 30.00, available: false, released_at: Time.now - 2.days, expiry_date: Time.now + 15.days, discount: 0)
+Product.create(name: "Product 5", description: "Coconut milk", quantity: 8, price: 18.50, available: true, released_at: Time.now - 3.days, expiry_date: Time.now + 40.days, discount: 20)
+Product.create(name: "Product 6", description: "Cashew milk", quantity: 12, price: 27.50, available: true, released_at: Time.now - 1.days, expiry_date: Time.now + 35.days, discount: 10)
+Product.create(name: "Product 7", description: "Rice milk", quantity: 4, price: 19.99, available: true, released_at: Time.now - 6.days, expiry_date: Time.now + 50.days, discount: 25)
+Product.create(name: "Product 8", description: "Pea milk", quantity: 2, price: 23.00, available: true, released_at: Time.now - 4.days, expiry_date: Time.now + 10.days, discount: 5)
+Product.create(name: "Product 9", description: "Chocolate milk", quantity: 6, price: 21.00, available: true, released_at: Time.now - 8.days, expiry_date: Time.now + 60.days, discount: 30)
+Product.create(name: "Product 10", description: "Strawberry milk", quantity: 1, price: 24.00, available: false, released_at: Time.now - 9.days, expiry_date: Time.now + 45.days, discount: 0)
 
 ```
 *   Create atleast 10 records using the save method
