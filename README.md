@@ -92,9 +92,18 @@ Product.where("name LIKE ?", "%Pro%")
 Product.where("description LIKE ?", "%portable%")
 ```  
 * Find products where price is between 50 and 150.
+```ruby =
+Product.where(price: 50..150)
+```
 *   Retrieve products where available is false and quantity is greater than 0.
+```ruby = 
+
+```
 *   Fetch products where released_at is after January 1, 2023.
-*   Find products where expiry_date is nil.
+```ruby = 
+
+```  
+* Find products where expiry_date is nil.
 *   Retrieve products where released_at is before January 1, 2022.
 *   Fetch products where quantity is between 10 and 100.
 *   Find products where discount is greater than or equal to 5%.
