@@ -80,7 +80,11 @@ Product.where(available:true)
 Product.where("quantity < ?", 50)
 ```
 *   Find products where discount is exactly 10%.
+```ruby =
+Product.where(discount:10)
+```
 *   Retrieve products where name contains the word "Pro".
+
 *   Fetch products where description includes the word "portable".
 *   Find products where price is between 50 and 150.
 *   Retrieve products where available is false and quantity is greater than 0.
