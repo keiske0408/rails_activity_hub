@@ -64,6 +64,9 @@ product10 = Product.new(name: "Product 10", description: "Strawberry milk", quan
 product10.save
 ```
 *   Fetch all products where name is "Laptop".
+```
+Product.find_by(name: 'Laptop') 
+```
 *   Find products where price is greater than 100.
 *   Retrieve products where available is true.
 *   Fetch products where quantity is less than 50.
