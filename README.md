@@ -10,7 +10,7 @@
   * released_at
   * expiry_date
   * discount
-```
+```ruby = 
 class CreateProductsTable < ActiveRecord::Migration[7.0]
   def change
     create_table :products_tables do |t|
@@ -28,7 +28,7 @@ class CreateProductsTable < ActiveRecord::Migration[7.0]
 end
 ```
 *   Create atleast 10 records using the create method
-```
+```ruby =
 Product.create(name: "Product 1", description: "Whole milk", quantity: 3, price: 20.50, available: true, released_at: Time.now - 5.days, expiry_date: Time.now + 25.days, discount: 10)
 Product.create(name: "Product 2", description: "Almond milk", quantity: 5, price: 25.00, available: true, released_at: Time.now - 10.days, expiry_date: Time.now + 30.days, discount: 15)
 Product.create(name: "Product 3", description: "Soy milk", quantity: 10, price: 22.00, available: true, released_at: Time.now - 7.days, expiry_date: Time.now + 20.days, discount: 5)
@@ -41,7 +41,7 @@ Product.create(name: "Product 9", description: "Chocolate milk", quantity: 6, pr
 Product.create(name: "Product 10", description: "Strawberry milk", quantity: 1, price: 24.00, available: false, released_at: Time.now - 9.days, expiry_date: Time.now + 45.days, discount: 0)
 ```
 *   Create atleast 10 records using the save method
-```
+```ruby =
 product1 = Product.new(name: "Product 1", description: "Whole milk", quantity: 3, price: 20.50, available: true, released_at: Time.now - 5.days, expiry_date: Time.now + 25.days, discount: 10)
 product1.save
 product2 = Product.new(name: "Product 2", description: "Almond milk", quantity: 5, price: 25.00, available: true, released_at: Time.now - 10.days, expiry_date: Time.now + 30.days, discount: 15)
@@ -64,10 +64,13 @@ product10 = Product.new(name: "Product 10", description: "Strawberry milk", quan
 product10.save
 ```
 *   Fetch all products where name is "Laptop".
-```
+``` ruby =
 Product.find_by(name: 'Laptop') 
-```
+``` 
 *   Find products where price is greater than 100.
+```ruby = 
+Product.where("price>'100'")
+```
 *   Retrieve products where available is true.
 *   Fetch products where quantity is less than 50.
 *   Find products where discount is exactly 10%.
