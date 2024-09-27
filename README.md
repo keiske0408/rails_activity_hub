@@ -69,9 +69,12 @@ Product.find_by(name: 'Laptop')
 ``` 
 *   Find products where price is greater than 100.
 ```ruby = 
-Product.where("price>'100'")
+Product.where("price > ?", 100)
 ```
 *   Retrieve products where available is true.
+```ruby =
+Product.where(available:true)
+```
 *   Fetch products where quantity is less than 50.
 *   Find products where discount is exactly 10%.
 *   Retrieve products where name contains the word "Pro".
