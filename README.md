@@ -236,6 +236,9 @@ Product.where(available:false).destroy_all
 Product.where("price > ?", 500).destroy_all
 ```
 *   Remove all products where quantity is 0.
+```ruby = 
+Product.where(quantity: 0).destroy_all
+```
 *   Delete products where discount is greater than 20%.
 *   Remove products where expiry_date is before today’s date.
 *   Delete all products where name starts with "Pro".
