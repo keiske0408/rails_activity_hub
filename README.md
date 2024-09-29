@@ -272,6 +272,9 @@ Product.where(quantity: 1..10).destroy_all
 Product.where(available: true, "price > ?", 300).destroy_all
 ```
 *   Delete products where discount is nil.
+```ruby =
+Product.where(discount: nil).destroy_all
+```
 *   Remove products where price is exactly 100.
 *   Delete products where released_at is more than 5 years ago.
 *   Remove products where description includes "obsolete".
