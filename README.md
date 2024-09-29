@@ -310,7 +310,12 @@ Product.pluck(:name).each do |name|
 end
 ```
 *   Write a new migration to rename the description to content
-```
+```ruby = 
+class RenameDescriptionToContentInProducts < ActiveRecord::Migration[6.0]  # or your current version
+  def change
+    rename_column :products, :description, :content
+  end
+end
 ```
 *   Write a new migration to add a new column image
 *   Write a new migration to remove the column expiry_date
