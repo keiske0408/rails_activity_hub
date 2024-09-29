@@ -318,4 +318,7 @@ class RenameDescriptionToContentInProducts < ActiveRecord::Migration[6.0]  # or 
 end
 ```
 *   Write a new migration to add a new column image
+```ruby =
+rails generate migration AddImageToProducts image:string
+```
 *   Write a new migration to remove the column expiry_date
