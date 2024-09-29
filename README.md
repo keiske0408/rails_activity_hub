@@ -141,11 +141,16 @@ Product.where(quantity:nil)
 ```
 *   Find products where discount is not nil.
 ```ruby=
-Product.where(name: 'Laptop').update_all(price: 120)
+Product.where.not(discount:nil)
 ```
 *   Update the price of a product where name is "Laptop" to 120.
-
+```ruby=
+Product.where(name: 'Laptop').update_all(price: 120)
+```
 *   Set the available status to false for products where quantity is 0.
+```ruby=
+Product.where(quantity: 0).update_all(available: false)
+```
 *   Increase the discount by 5% for products where price is greater than 100.
 *   Update the description to "Out of stock" for products where available is false.
 *   Change the expiry_date to December 31, 2024, for products with a discount greater than 10%.
