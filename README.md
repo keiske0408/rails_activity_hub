@@ -296,6 +296,9 @@ Product.where(quantity: nil).destroy_all
 Product.where("expiry_date <= ?", 1.month.from_now).destroy_all
 ```
 *   Delete products where discount is less than 5%.
+```ruby =
+Product.where("discount < ?", 5).destroy_all
+```
 *   Remove all products where available is true but quantity is less than 5.
 *   Print the name of all the products
 *   Write a new migration to rename the description to content
