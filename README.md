@@ -322,3 +322,10 @@ end
 rails generate migration AddImageToProducts image:string
 ```
 *   Write a new migration to remove the column expiry_date
+```ruby =
+class RemoveExpiryDateFromProducts < ActiveRecord::Migration[6.0]  # or your current version
+  def change
+    remove_column :products, :expiry_date, :datetime
+  end
+end
+```

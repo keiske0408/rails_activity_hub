@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_29_172934) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_29_173231) do
   create_table "products", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "content"
@@ -18,7 +18,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_29_172934) do
     t.decimal "price", precision: 10
     t.boolean "available"
     t.time "released_at"
-    t.time "expiry_date"
     t.integer "discount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
