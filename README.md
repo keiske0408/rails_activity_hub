@@ -248,6 +248,9 @@ Product.where("discount > ?", 20).destroy_all
 Product.where("expiry_date < ?", Date.today).destroy_all
 ```
 *   Delete all products where name starts with "Pro".
+```ruby =
+Product.where("name LIKE ?", "Pro").destroy_all
+```
 *   Remove products where price is less than 50.
 *   Delete products where released_at is before January 1, 2022.
 *   Remove products where description contains "discontinued".
