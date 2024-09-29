@@ -124,34 +124,37 @@ Product.where("discount >= ?", 5)
 Product.where("price <= ? AND available = ?", 200, true)
 ```
 *   Fetch products where expiry_date is before today’s date.
-```ruby=
+```ruby =
 Product.where(expiry_date < ?', Date.today)
 ```
 *   Find products where name starts with the letter "A".
-```ruby=
+```ruby =
 Product.where('name LIKE ?', 'A%')
 ```
 *   Retrieve products where price is not equal to 100.
-```ruby=
+```ruby =
 Product.where.not(price: 100)
 ```
 *   Fetch products where quantity is nil.
-```ruby=
+```ruby =
 Product.where(quantity:nil)
 ```
 *   Find products where discount is not nil.
-```ruby=
+```ruby =
 Product.where.not(discount:nil)
 ```
 *   Update the price of a product where name is "Laptop" to 120.
-```ruby=
+```ruby =
 Product.where(name: 'Laptop').update_all(price: 120)
 ```
 *   Set the available status to false for products where quantity is 0.
-```ruby=
+```ruby =
 Product.where(quantity: 0).update_all(available: false)
 ```
 *   Increase the discount by 5% for products where price is greater than 100.
+```ruby =
+Product.where("price > ?", 100).update_all("discount = discount + 5")
+```
 *   Update the description to "Out of stock" for products where available is false.
 *   Change the expiry_date to December 31, 2024, for products with a discount greater than 10%.
 *   Update the quantity to 50 for products where name starts with "Pro".
