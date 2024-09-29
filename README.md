@@ -168,6 +168,9 @@ Product.where("discount >?", 10).update_all(expiry_date: DateTime.new(2023, 12, 
 Product.where("name LIKE ?", "Pro%").update_all(quantity: 50)
 ```
 *   Set the price to 200 for all products where discount is nil.
+```ruby =
+Product.where(discount: nil).update_all(price: 200)
+```
 *   Mark products as available if their released_at is before January 1, 2023.
 *   Update the price to 80 where the quantity is between 10 and 20.
 *   Remove any discount (set to nil) for products where expiry_date is before today.
