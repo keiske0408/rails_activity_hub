@@ -304,6 +304,13 @@ Product.where("discount < ?", 5).destroy_all
 Product.where(available: true, "quantity < ?", 5).destroy_all
 ```
 *   Print the name of all the products
+```ruby = 
+Product.pluck(:name).each do |name|
+  puts name
+end
+```
 *   Write a new migration to rename the description to content
+```
+```
 *   Write a new migration to add a new column image
 *   Write a new migration to remove the column expiry_date
