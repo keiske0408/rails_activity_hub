@@ -228,6 +228,9 @@ Product.where("description LIKE ?", "%sale%").update_all(price: 150)
 Product.where(name: "Laptop").destroy_all
 ```
 *   Remove all products where available is false.
+```ruby =
+Product.where(available:false).destroy_all
+```
 *   Delete products where price is greater than 500.
 *   Remove all products where quantity is 0.
 *   Delete products where discount is greater than 20%.
