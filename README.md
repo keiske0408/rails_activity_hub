@@ -252,6 +252,9 @@ Product.where("expiry_date < ?", Date.today).destroy_all
 Product.where("name LIKE ?", "Pro").destroy_all
 ```
 *   Remove products where price is less than 50.
+```ruby =
+Product.where("price < ?", 50).destroy_all
+```
 *   Delete products where released_at is before January 1, 2022.
 *   Remove products where description contains "discontinued".
 *   Delete products where quantity is between 1 and 10.
