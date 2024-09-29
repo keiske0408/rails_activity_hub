@@ -125,13 +125,16 @@ Product.where("price <= ? AND available = ?", 200, true)
 ```
 *   Fetch products where expiry_date is before today’s date.
 ```ruby=
-Product.where('expiry_date < ?', Date.today)
+Product.where(expiry_date < ?', Date.today)
 ```
 *   Find products where name starts with the letter "A".
 ```ruby=
 Product.where('name LIKE ?', 'A%')
 ```
 *   Retrieve products where price is not equal to 100.
+```ruby=
+Product.where.not(price: 100)
+```
 *   Fetch products where quantity is nil.
 *   Find products where discount is not nil.
 *   Update the price of a product where name is "Laptop" to 120.
