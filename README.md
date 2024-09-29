@@ -284,6 +284,9 @@ Product.where(price: 100).destroy_all
 Product.where("released_at < ?", 5.years.ago).destroy_all
 ```
 *   Remove products where description includes "obsolete".
+```ruby = 
+Product.where("description LIKE ?", "%obsolete%").destroy_all
+```
 *   Delete products where quantity is nil.
 *   Remove products where expiry_date is within the next month.
 *   Delete products where discount is less than 5%.
