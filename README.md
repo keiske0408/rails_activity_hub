@@ -204,6 +204,9 @@ Product.where("quantity < ?", 5).update_all("price = price * 0.8")
 Product.where("price >= ?", 300).update_all(discount: 0)
 ```
 *   Change the description to "Limited time offer" where the discount is 15%.
+```ruby = 
+Product.where(discount: 15).update_all(description: "Limited time offer")
+```
 *   Set available to true for products where the price is between 100 and 200.
 *   Increase the quantity by 10 for products where released_at is after January 1, 2023.
 *   Set the expiry_date to nil for products where discount is less than 5%.
