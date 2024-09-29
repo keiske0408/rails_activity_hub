@@ -268,6 +268,9 @@ Product.where("description LIKE ?", "%discontinued%").destroy_all
 Product.where(quantity: 1..10).destroy_all
 ```
 *   Remove all products where available is true and price is greater than 300.
+```ruby =
+Product.where(available: true, "price > ?", 300).destroy_all
+```
 *   Delete products where discount is nil.
 *   Remove products where price is exactly 100.
 *   Delete products where released_at is more than 5 years ago.
