@@ -184,6 +184,9 @@ Product.where(quantity: 10..20).update_all(price: 80)
 Product.where("expiry_date < ?", Date.today).update_all(discount: nil)
 ```
 *   Update the name to "Premium Laptop" for products where price is more than 500.
+```ruby =
+Product.where("price > ?", 500).update_all(name: "Premium Laptop")
+```
 *   Set the quantity to nil for products where available is false.
 *   Update released_at to the current date for products with a price less than 50.
 *   Reduce the price by 20% for products where quantity is less than 5.
