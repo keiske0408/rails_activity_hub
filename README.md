@@ -244,6 +244,9 @@ Product.where(quantity: 0).destroy_all
 Product.where("discount > ?", 20).destroy_all
 ```
 *   Remove products where expiry_date is before today’s date.
+```ruby =
+Product.where("expiry_date < ?", Date.today).destroy_all
+```
 *   Delete all products where name starts with "Pro".
 *   Remove products where price is less than 50.
 *   Delete products where released_at is before January 1, 2022.
