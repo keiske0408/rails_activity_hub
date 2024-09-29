@@ -156,7 +156,13 @@ Product.where(quantity: 0).update_all(available: false)
 Product.where("price > ?", 100).update_all("discount = discount + 5")
 ```
 *   Update the description to "Out of stock" for products where available is false.
+```ruby = 
+Product.where(available: false).update_all(description: "Out of stock")
+```
 *   Change the expiry_date to December 31, 2024, for products with a discount greater than 10%.
+```ruby = 
+Product.where("discount >?", 10).update_all(expiry_date: DateTime.new(2023, 12, 31))
+```
 *   Update the quantity to 50 for products where name starts with "Pro".
 *   Set the price to 200 for all products where discount is nil.
 *   Mark products as available if their released_at is before January 1, 2023.
