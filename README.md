@@ -232,6 +232,9 @@ Product.where(name: "Laptop").destroy_all
 Product.where(available:false).destroy_all
 ```
 *   Delete products where price is greater than 500.
+```ruby = 
+Product.where("price > ?", 500).destroy_all
+```
 *   Remove all products where quantity is 0.
 *   Delete products where discount is greater than 20%.
 *   Remove products where expiry_date is before today’s date.
