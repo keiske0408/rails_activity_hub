@@ -192,6 +192,9 @@ Product.where("price > ?", 500).update_all(name: "Premium Laptop")
 Product.where(available: false).update_all(quantity: nil)
 ```
 *   Update released_at to the current date for products with a price less than 50.
+```ruby =
+Product.where("price < ?", 50).update_all(released_at: Time.current)
+```
 *   Reduce the price by 20% for products where quantity is less than 5.
 *   Set the discount to 0% for products with a price greater than or equal to 300.
 *   Change the description to "Limited time offer" where the discount is 15%.
